@@ -109,29 +109,38 @@ function calculAge($person_1){
 <body>
     <h2>Exercice 1</h2>
     <p><?php echo "La phrase \"$phrase\" contient $nbCar caractères" ?></p>
+    
     <h2>Exercice 2</h2>
     <p><?php echo "La phrase \"$phrase\" contient $nbMots mots" ?></p>
+    
     <h2>Exercice 3</h2>
     <p><?php echo "L'ancienne phrase est : \"$phrase\"" ?></p>
     <p><?php echo "La nouvelle phrase est : \"$nvPhrase\"" ?></p>
+    
     <h2>Exercice 4</h2>
-    <p><?php if(strtolower($phSuiv) === $inverse){
+    <p><?php 
+    if(strtolower($phSuiv) === $inverse){
         echo "La phrase \"$phSuivante\" est palindrome";
     } else {
         echo "La phrase \"$phSuivante\" n'est pas palindrome";
-    } ?></p>
+    } 
+    ?></p>
+    
     <h2>Exercice 5</h2>
     <p><?php echo "Montant en francs : $mtFranc" ?></p>
     <p><?php echo "$mtFranc francs = $mtEuros €" ?></p>
+    
     <h2>Exercice 6</h2>
     <p><?php echo "Prix unitaire de l'article : $prixu €" ?></p>
     <p><?php echo "Quantité : $qte" ?></p>
     <p><?php echo "Taux de TVA : $tvaEcrite %" ?></p>
     <p><?php echo "Prix total TTC : $pttc €" ?></p>
+    
     <h2>Exercice 7</h2>
-    <p><?php if($ageEnfant>14){
+    <p><?php 
+    if($ageEnfant>14){
         echo "L'enfant ne peut entrer dans aucune catégorie";
-    }else if($ageEnfant>=11){
+    } else if($ageEnfant>=11){
         echo "L'enfant qui a $ageEnfant ans appartient à la catégorie \"Cadet\"";
     } else if($ageEnfant>=10){
         echo "L'enfant qui a $ageEnfant ans appartient à la catégorie \"Minime\"";
@@ -141,21 +150,28 @@ function calculAge($person_1){
         echo "L'enfant qui a $ageEnfant ans appartient à la catégorie \"Poussin\"";
     } else {
         echo "L'enfant ne peut entrer dans aucune catégorie";
-    } ?></p>
+    } 
+    ?></p>
+    
     <h2>Exercice 8</h2>
     <p><?php echo "Table de $nb :" ?></p>
-    <p><?php for($i=1; $i<=10; $i++){
+    <p><?php 
+    for($i=1; $i<=10; $i++){
         $nbVrai = $nb*$i;
         echo "$nb &times $i = $nbVrai"."<br>";
-    } ?></p>
+    } 
+    ?></p>
+    
     <h2>Exercice 9</h2>
-    <p><?php if($sexe=="F" && $age>=18 && $age<36){
+    <p><?php 
+    if($sexe=="F" && $age>=18 && $age<36){
         echo "La personne est imposable";
     } else if($sexe=="M" && $age>=20){
         echo "La personne est imposable";
     } else {
         echo "La personne n'est pas imposable";
     } ?></p>
+    
     <h2>Exercice 10</h2>
     <p><?php echo "Montant à payer : $apayer €" ?></p>
     <p><?php echo "Montant versé : $verse €" ?></p>
@@ -184,22 +200,31 @@ function calculAge($person_1){
     } 
     else echo "Pas assez de thunes mec, va bosser ! Il te manque ".abs($aRendre)." euro(s)";
     ?></p>
+    
     <h2>Exercice 11</h2>
     <p><?php echo 'Il y a '.count($voitures).' marques de voiture :' ?></p>
     <ul>
-        <?php for($l=0; $l<=3; $l++){
+        <?php 
+        for($l=0; $l<=3; $l++){
             echo "<li>".$voitures[$l]."</li>";
-        } ?>
+        } 
+        ?>
     </ul>
+    
     <h2>Exercice 12</h2>
-    <p><?php foreach($perso as $pers => $langue){
+    <p><?php 
+    foreach($perso as $pers => $langue){
         echo $bonjours[$correspondances[$langue]]." ".$pers."<br>";
-    } ?></p>
+    } 
+    ?></p>
+    
     <h2>Exercice 13</h2>
     <p><?php echo "Les notes de l'élève sont : ".implode(" / ", $notes)?></p>
     <p><?php echo "Sa moyenne générale est donc de : $moyenne" ?></p>
+    
     <h2>Exercice 14</h2>
     <p><?php echo calcAge($naissance) ?></p>
+    
     <h2>Exercice 15</h2>
     <p><?php echo calculAge($person_1) ?></p>
     <p><?php echo calculAge($person_2) ?></p>
